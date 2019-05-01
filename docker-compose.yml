@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7.23
+    container_name: database.dev
+    volumes:
+      - ./data/mysql/:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - custom
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_USER: root
+      # MYSQL_PASSWORD: pass
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  mongo_db:
+    image: mongo:3.6
+    container_name: mongo
+    working_dir: /app
+    volumes:
+      - ./data/mongo/:/data/db
+      - ./data/mongo_mount/:/app
+    ports:
+      - "27017:27017"
+networks:
+  custom:
+    external: true
