@@ -8,11 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
-@Entity(name = "laptops")
-public class LaptopEntity {
+@Entity(name = "watches")
+public class WatchEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Integer price;
+    private Long price;
 }
