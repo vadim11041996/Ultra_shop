@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class UserControllerImpl implements UserController {
-
     private final UserBusiness userBusiness;
 
     @Override
