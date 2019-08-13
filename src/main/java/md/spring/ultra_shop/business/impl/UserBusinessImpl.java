@@ -11,7 +11,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserBusinessImpl implements UserBusiness {
-
     private final UserRepository repository;
 
     @Override
