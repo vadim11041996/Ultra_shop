@@ -11,10 +11,16 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class UserControllerImpl implements UserController {
+
     private final UserBusiness userBusiness;
 
     @Override
     public List<UserEntity> retrieveUser() {
         return userBusiness.retrieveUser();
+    }
+
+    @Override
+    public UserEntity createUser() {
+        return userBusiness.createUser();
     }
 }

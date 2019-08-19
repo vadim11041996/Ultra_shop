@@ -17,4 +17,14 @@ public class UserBusinessImpl implements UserBusiness {
     public List<UserEntity> retrieveUser() {
         return repository.findAll();
     }
+
+    @Override
+    public UserEntity createUser() {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName("name2");
+        userEntity.setEmail("email2@mail.com");
+
+        repository.save(userEntity);
+        return userEntity;
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface UserBusiness {
     List<UserEntity> retrieveUser();
+
+    UserEntity createUser();
 }
