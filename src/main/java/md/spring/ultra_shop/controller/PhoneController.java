@@ -1,13 +1,16 @@
 package md.spring.ultra_shop.controller;
 
-import md.spring.ultra_shop.repository.entity.LaptopEntity;
+import md.spring.ultra_shop.repository.entity.PhoneEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.List;
 
-@RequestMapping(path = "laptop")
-public interface LaptopController {
+
+@RequestMapping("/phones")
+public interface PhoneController {
 
     @GetMapping
-    List<LaptopEntity> retrieveLaptop();
+    List<PhoneEntity> retrievePhones();
+
 }
