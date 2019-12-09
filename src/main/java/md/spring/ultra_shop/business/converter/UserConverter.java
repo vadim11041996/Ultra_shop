@@ -6,7 +6,7 @@ import md.spring.ultra_shop.repository.entity.UserEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserConverter extends Converter<UserEntity, User> {
+public class    UserConverter extends Converter<UserEntity, User> {
 
     @Override
     protected User doForward(UserEntity entity) {
