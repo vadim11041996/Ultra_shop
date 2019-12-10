@@ -5,16 +5,15 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Data
-@Entity(name = "users")
+@Entity(name = "user")
 public class UserEntity {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+//    @OneToMany()
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "email", nullable = false)
     private String email;
 }
